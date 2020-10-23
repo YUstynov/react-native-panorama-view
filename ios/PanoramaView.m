@@ -91,9 +91,9 @@
 
 -(void)setEnableTouchTracking:(BOOL)enableTouchTracking
 {
-    if (enableTouchTracking) {
-        _panoView.controlMethod = CTPanoramaControlMethodTouch;
-    }
+        if (!enableTouchTracking) {
+            _panoView.controlMethod = CTPanoramaControlMethodMotion;
+        }
 }
 
 - (void)imageLoadingFailed {
